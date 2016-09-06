@@ -1,2 +1,32 @@
-Hello !
-This site is public.
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+   xmlns:h="http://java.sun.com/jsf/html"
+   xmlns:p="http://primefaces.org/ui" >
+    <h:head>
+        <title>DRIOCA Trainer-1 PUBLIC Page</title>
+         <h:outputStylesheet library="css" name="styles.css"  /> 	
+    </h:head>
+    <h:body>
+       <p:fieldset legend="The Number" style="margin-bottom:20px">
+         9182
+        <h:form>
+            <h:commandButton action="${loginController.logout()}" value="Logout"/>
+        </h:form>
+        <h:form>
+            <p:commandButton action="home?faces-redirect=true"
+               value="Back To Home Page" />
+    </h:form>
+    <h:form>
+        
+    </h:form>
+    
+    <h:form>
+   <a href="https://drioca.github.io/">
+    <input type="button" value="Open DRIOCA webpage" />
+   </a>
+   </h:form>
+   </p:fieldset>
+    </h:body>
+</html>
