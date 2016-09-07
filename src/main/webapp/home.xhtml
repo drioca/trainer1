@@ -18,10 +18,36 @@
     <p:accordionPanel multiple="true">
         <p:tab title="I Login">
             <h:panelGrid columns="2" cellpadding="10">
-               
-                <h:outputText
-                    value="Please login with your Uname/pword or use guest/pw" />
-            </h:panelGrid>
+<h:form>
+	<p:fieldset legend="PrimeFaces in progress..." style="margin-bottom:20px">
+    
+
+    <h2>Login Page</h2>
+    <p>You can use "admin" and "qwert" to login.</p>
+    </p:fieldset>
+    <p:panelGrid columns="3">
+        <h:outputLabel for="username" value="User Name:" />
+        <h:inputText id="username" value="#{loginController.username}"
+            required="true" label="Username" />
+        <h:message for="username" />
+
+        <h:outputLabel for="password" value="Password:" />
+        <h:inputSecret id="password" value="#{loginController.password}" required="true" 
+            label="Password" />
+        <h:message for="password" />
+        
+        
+
+        <h:outputLabel for="rememberMe" value="Remember Me:" />
+        <h:selectBooleanCheckbox id="rememberMe"
+            value="#{loginController.rememberMe}" />
+
+        <h:commandButton action="#{loginController.authenticate()}"
+            value="Login" />
+
+    </p:panelGrid>
+     
+</h:form>
         </p:tab>
         <p:tab title="II Plan">
             <h:panelGrid columns="2" cellpadding="10">
