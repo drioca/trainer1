@@ -11,10 +11,8 @@
     </h:head>
     <h:body>
        <p:fieldset legend="The secret" style="margin-bottom:20px">
-        PIN: 9182
-        <h:form>
-            <h:commandButton action="${loginController.logout()}" value="Logout"/>
-        </h:form>
+        
+
 
   <p:panelGrid columns="2">
     <f:facet name="header">
@@ -26,14 +24,17 @@
  
     <h:outputText value="PIN:" />
     <h:outputText value="9182" />
- 
-</p:panelGrid>
+         <h:form>
+            <h:commandButton action="${loginController.logout()}" value="Logout"/>
+        </h:form>
+
     
     <h:form>
    <a href="https://drioca.github.io/">
     <input type="button" value="Open DRIOCA webpage" />
    </a>
    </h:form>
+   </p:panelGrid>
    </p:fieldset>
     </h:body>
 </html>
