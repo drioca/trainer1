@@ -10,18 +10,24 @@
          
     </h:head>
     <h:body>
-       <p:fieldset legend="PrimeFaces in progress..." style="margin-bottom:20px">
+       <p:fieldset legend="The secret" style="margin-bottom:20px">
         PIN: 9182
         <h:form>
             <h:commandButton action="${loginController.logout()}" value="Logout"/>
         </h:form>
-        <h:form>
+
+  <p:panelGrid columns="2">
+    <f:facet name="header">
+                <h:form>
             <p:commandButton action="home?faces-redirect=true"
                value="Back To Home Page" />
     </h:form>
-    <h:form>
-        
-    </h:form>
+    </f:facet>
+ 
+    <h:outputText value="PIN:" />
+    <h:outputText value="9182" />
+ 
+</p:panelGrid>
     
     <h:form>
    <a href="https://drioca.github.io/">
