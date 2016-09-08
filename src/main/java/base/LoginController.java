@@ -71,7 +71,8 @@ try {
 } catch (Exception e) {
     log.warning(e.toString());
 }
-return "protected?faces-redirect=true";
+currentUser.logout();
+return "/logout";
 }
 
 public String getUsername() {
