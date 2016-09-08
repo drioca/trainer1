@@ -63,17 +63,17 @@ try {
 return "protected?faces-redirect=true";
 }
 
-public String logout() {
+public void logout() {
 
 Subject currentUser = SecurityUtils.getSubject();
 try {
-    SecurityUtils.getSubject().logout();
+    currentUser.logout();
 } catch (Exception e) {
     log.warning(e.toString());
 }
-SecurityUtils.getSubject().logout();
 
-return "/logout";
+
+
 }
 
 public String getUsername() {
