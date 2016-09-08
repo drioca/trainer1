@@ -67,7 +67,7 @@ public String logout() {
 
 Subject currentUser = SecurityUtils.getSubject();
 try {
-    currentUser.logout();
+    SecurityUtils.getSubject().logout();
 } catch (Exception e) {
     log.warning(e.toString());
 }
