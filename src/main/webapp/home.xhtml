@@ -16,6 +16,8 @@
    <p:fieldset legend="DRIOCA TRAINER-1" style="margin-bottom:20px" icon="ui-icon-star">
     <h:form>
     <p:accordionPanel multiple="true">
+       <h:outputLink id="fade" value="#">
+          <p:tooltip id="toolTipFade" for="fade" value="You can login  with guest/Guest1" position="top"/>
         <p:tab title="I Login">
     (Try to use admin/qwert!)
     <p:panelGrid columns="3">
@@ -48,7 +50,9 @@
                
                 <h:outputText value="Plan your training and indicators!" />
             </h:panelGrid>
+            
         </p:tab>
+        </h:outputLink>
         <p:tab title="III Register">
             <h:panelGrid columns="2" cellpadding="10">
                 
