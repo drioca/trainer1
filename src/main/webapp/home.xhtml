@@ -19,9 +19,10 @@
 
         <p:tab title="I Login">
            <h:outputLink id="fade" value="#">
-                  <p:tooltip id="toolTipFade" for="fade" value="You can login  with guest/Guest1" position="top"/>
-    <h:outputLabel  value="To reach protected pages and functions you need to be logged in!"/>
-         </h:outputLink>
+                  <p:tooltip id="toolTipFade" for="fade" value="To reach protected pages and functions you need to be logged in.
+                  You can log in  with guest/Guest1" position="top"/>
+    
+        
     <p:panelGrid columns="3">
         <h:outputLabel for="username" value="User Name:" />
         <h:inputText id="username" value="#{loginController.username}"
@@ -41,7 +42,7 @@
             value="Login" />
 
     </p:panelGrid>
-    
+     </h:outputLink>
     
          <a href="https://drioca-trainer.herokuapp.com/test.xhtml">
                
