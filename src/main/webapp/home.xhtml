@@ -18,8 +18,10 @@
     <p:accordionPanel multiple="true">
 
         <p:tab title="I Login">
-    <h:outputText  value="You can login  with guest/Guest1"/>
-         
+           <h:outputLink id="fade" value="#">
+                  <p:tooltip id="toolTipFade" for="fade" value="You can login  with guest/Guest1" position="top"/>
+    <h:outputLabel  value="To reach protected pages and functions you need to be logged in!"/>
+         </h:outputLink>
     <p:panelGrid columns="3">
         <h:outputLabel for="username" value="User Name:" />
         <h:inputText id="username" value="#{loginController.username}"
@@ -42,14 +44,13 @@
     
     
          <a href="https://drioca-trainer.herokuapp.com/test.xhtml">
-               <h:outputLink id="fade" value="#">
-                  <p:tooltip id="toolTipFade" for="fade" value="Availible after login" position="top"/>
+               
                      <p:button value="Open Secret webpage" >
                      </p:button>
-               </h:outputLink>
+               
          
          </a>
-    
+   
         </p:tab>
         
         <p:tab title="II Plan">
