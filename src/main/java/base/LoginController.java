@@ -71,7 +71,8 @@ try {
 } catch (Exception e) {
     log.warning(e.toString());
 }
-currentUser.logout();
+SecurityUtils.getSubject().logout();
+
 return "/logout";
 }
 
