@@ -75,7 +75,7 @@ try {
             null,
             new FacesMessage("Logout Failed:"+ e.getMessage(), e
                     .toString()));
-     return "/logout";
+     return "/home.xhtml";
 }
 
  return "/home.xhtml";
