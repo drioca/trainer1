@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+   xmlns:f="http://java.sun.com/jsf/core"
+   xmlns:h="http://java.sun.com/jsf/html"
+   xmlns:p="http://primefaces.org/ui"  >
+    <h:head>
+        <title>DRIOCA Secret Page</title>
+         
+    </h:head>
+    <h:body>
+       <p:fieldset legend="The secret" style="margin-bottom:20px">
+        
+
+
+  <p:panelGrid columns="2">
+    <f:facet name="header">
+                <h:form>
+            <p:commandButton action="home?faces-redirect=true"
+               value="Back To Home Page" />
+    </h:form>
+    </f:facet>
+ 
+    <h:outputText value="PIN:" />
+    <h:outputText value="9182" />
+         <h:form>
+            <h:commandButton action="${loginController.logout()}" value="Logout"/>
+        </h:form>
+
+    
+    <h:form>
+   <a href="https://drioca.github.io/">
+    <input type="button" value="Open DRIOCA webpage" />
+   </a>
+   </h:form>
+   </p:panelGrid>
+   </p:fieldset>
+    </h:body>
+</html>

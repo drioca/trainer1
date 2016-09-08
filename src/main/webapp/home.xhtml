@@ -16,19 +16,52 @@
    <p:fieldset legend="DRIOCA TRAINER-1" style="margin-bottom:20px" icon="ui-icon-star">
     <h:form>
     <p:accordionPanel multiple="true">
+
         <p:tab title="I Login">
-            <h:panelGrid columns="2" cellpadding="10">
+           <h:outputLink id="fade" value="#">
+                  <p:tooltip id="toolTipFade" for="fade" value="To reach protected pages and functions you need to be logged in.
+                  You can log in  with guest/Guest1"  position="top" style="width:400px"   />
+    
+        
+    <p:panelGrid columns="3">
+        <h:outputLabel for="username" value="User Name:" />
+        <h:inputText id="username" value="#{loginController.username}"
+            required="true" label="Username" />
+        <h:message for="username" />
+
+        <h:outputLabel for="password" value="Password:" />
+        <h:inputSecret id="password" value="#{loginController.password}" required="true" 
+            label="Password" />
+        <h:message for="password" />
+        
+        <h:outputLabel for="rememberMe" value="Remember Me:" />
+        <h:selectBooleanCheckbox id="rememberMe"
+            value="#{loginController.rememberMe}" />
+
+        <h:commandButton action="#{loginController.authenticate()}"
+            value="Login" />
+
+    </p:panelGrid>
+     </h:outputLink>
+    
+         <a href="https://drioca-trainer.herokuapp.com/test.xhtml">
                
-                <h:outputText
-                    value="Please login with your Uname/pword or use guest/pw" />
-            </h:panelGrid>
+                     <p:button value="Open Secret webpage" >
+                     </p:button>
+               
+         
+         </a>
+   
         </p:tab>
+        
         <p:tab title="II Plan">
             <h:panelGrid columns="2" cellpadding="10">
                
                 <h:outputText value="Plan your training and indicators!" />
             </h:panelGrid>
+            
         </p:tab>
+        
         <p:tab title="III Register">
             <h:panelGrid columns="2" cellpadding="10">
                 
