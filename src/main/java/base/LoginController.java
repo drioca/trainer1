@@ -63,16 +63,21 @@ try {
 return "protected?faces-redirect=true";
 }
 
-public void logout() {
+public String logout() {
 
 Subject currentUser = SecurityUtils.getSubject();
 try {
     currentUser.logout();
 } catch (Exception e) {
     log.warning(e.toString());
+    FacesContext.getCurrentInstance().addMessage(
+            null,
+            new FacesMessage("Logout Failed:"+ e.getMessage(), e
+                    .toString()));
+     return "/logout";
 }
 
-
+ return "/logout";
 
 }
 
