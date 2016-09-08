@@ -18,7 +18,7 @@
     <p:accordionPanel multiple="true">
 
         <p:tab title="I Login">
-    <h1>You can login  with guest/Guest1</h1>
+    <h4>You can login  with guest/Guest1</h4>
            <h:outputLink id="fade" value="#">
           <p:tooltip id="toolTipFade" for="fade" value="You can login  with guest/Guest1" position="top, right"/>
     <p:panelGrid columns="3">
@@ -40,11 +40,14 @@
             value="Login" />
 
     </p:panelGrid>
-    </h:outputLink>
+    
+    <h:outputLink id="fade" value="#">
+          <p:tooltip id="toolTipFade" for="fade" value="You can login  with guest/Guest1" position="top, right"/>
          <a href="https://drioca-trainer.herokuapp.com/test.xhtml">
          <p:button value="Open Secret webpage" >
          </p:button>
          </a>
+         </h:outputLink>
         </p:tab>
         
         <p:tab title="II Plan">
