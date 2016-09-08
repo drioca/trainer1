@@ -18,9 +18,8 @@
     <p:accordionPanel multiple="true">
 
         <p:tab title="I Login">
-    <h4>You can login  with guest/Guest1</h4>
-           <h:outputLink id="fade" value="#">
-          <p:tooltip id="toolTipFade" for="fade" value="You can login  with guest/Guest1" position="top, right"/>
+    <h:outputText  value="You can login  with guest/Guest1"/>
+         
     <p:panelGrid columns="3">
         <h:outputLabel for="username" value="User Name:" />
         <h:inputText id="username" value="#{loginController.username}"
@@ -47,7 +46,7 @@
          <p:button value="Open Secret webpage" >
          </p:button>
          </a>
-         </h:outputLink>
+      </h:outputLink>
         </p:tab>
         
         <p:tab title="II Plan">
