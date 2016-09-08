@@ -25,7 +25,8 @@
     <h:outputText value="PIN:" />
     <h:outputText value="9182" />
          <h:form>
-            <p:commandButton actionListener="#{loginController.logout()}" value="Logout"/>
+            <p:growl id="growl" life="2000" />
+            <p:commandButton actionListener="#{loginController.logout()}" value="Logout" update="growl"/>
         </h:form>
 
     
