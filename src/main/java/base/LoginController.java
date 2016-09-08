@@ -78,7 +78,7 @@ try {
      return "/logout";
 }
 
- return "/logout";
+ return "/home.xhtml";
 
 }
 
