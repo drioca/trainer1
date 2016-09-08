@@ -71,7 +71,7 @@ try {
 } catch (Exception e) {
     log.warning(e.toString());
 }
-return "index";
+return "/logout";
 }
 
 public String getUsername() {
