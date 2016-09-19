@@ -32,12 +32,58 @@ public static void main (){ }
 private static Connection getConnection() throws URISyntaxException, SQLException {
     String dbUrl = System.getenv("JDBC_DATABASE_URL");
     return DriverManager.getConnection(dbUrl);
-    
-    
-   }
+    }
    
 
-   public void insert () {
+public void insertRun () {
+        
+      String iNs = "INSERT INTO test (age) VALUES (" + Integer.toString(UserData.age) +");";
+
+        try {
+            Connection con = getConnection( ); 
+            Statement stmtc = con.createStatement();
+         stmtc.executeUpdate("CREATE TABLE IF NOT EXISTS public.test (key_column bigserial NOT NULL, age numeric(4,0), ctimestamp timestamptz DEFAULT now(), CONSTRAINT test_pkey PRIMARY KEY (key_column) );");
+        Statement stmt = con.createStatement();
+        stmt.executeUpdate(iNs);
+        stmt.executeUpdate("commit;");
+         con.close();
+        }
+
+     
+         catch (Exception e) {
+       
+           // Check first if an InnerException exists
+                if (e != null)
+                   UserData.dbemanerrormsg = e.toString();
+      } finally {
+       //try{con.close();} catch(SQLException e){};
+      }
+   }
+public void insertUser () {
+        
+      String iNs = "INSERT INTO test (age) VALUES (" + Integer.toString(UserData.age) +");";
+
+        try {
+            Connection con = getConnection( ); 
+            Statement stmtc = con.createStatement();
+         stmtc.executeUpdate("CREATE TABLE IF NOT EXISTS public.test (key_column bigserial NOT NULL, age numeric(4,0), ctimestamp timestamptz DEFAULT now(), CONSTRAINT test_pkey PRIMARY KEY (key_column) );");
+        Statement stmt = con.createStatement();
+        stmt.executeUpdate(iNs);
+        stmt.executeUpdate("commit;");
+         con.close();
+        }
+
+     
+         catch (Exception e) {
+       
+           // Check first if an InnerException exists
+                if (e != null)
+                   UserData.dbemanerrormsg = e.toString();
+      } finally {
+       //try{con.close();} catch(SQLException e){};
+      }
+   }
+public void insertTrainer () {
         
       String iNs = "INSERT INTO test (age) VALUES (" + Integer.toString(UserData.age) +");";
 
@@ -62,36 +108,9 @@ private static Connection getConnection() throws URISyntaxException, SQLExceptio
       }
    }
    
-      public void aVerage () {
-          float iaVg = 0f;
-        ResultSet rs;
-        try {
-            Connection con = getConnection( ); 
-            Statement stmt = con.createStatement();
-            
-            rs = stmt.executeQuery("SELECT AVG(age) FROM test"); 
-if(rs.next())
-      iaVg = rs.getFloat(1);
-       UserData.aVg = Float.toString(iaVg);
-        stmt.executeUpdate("commit;");
-         con.close();
-       
-         
-        }
-
-     
-         catch (Exception e) {
-       
-           // Check first if an InnerException exists
-                if (e != null)
-                   UserData.dbemanerrormsg2 = e.toString();
-      } finally {
-       //try{con.close();} catch(SQLException e){};
-      }
       
-   }
 
-// to list
+
  public List<Record> getRecordList()
 {
 List<Record> list = new ArrayList<Record>();
@@ -133,6 +152,6 @@ e.printStackTrace();
 }
 return list;
 }
-//end list
+
  
    }
