@@ -35,7 +35,7 @@ private static Connection getConnection() throws URISyntaxException, SQLExceptio
     }
    
 
-public void insertRun () {
+public void insertDiary () {
         
       String iNs = "INSERT INTO test (age) VALUES (" + Integer.toString(UserData.age) +");";
 
